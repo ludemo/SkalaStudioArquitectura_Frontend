@@ -1,3 +1,6 @@
-export default function HomePage(){
-    return <h1>Suficiencia</h1>
+export default function Suficiencia(){
+    return (
+    <div>   
+        <h1>Suficiencia</h1>
+    </div>);
 }

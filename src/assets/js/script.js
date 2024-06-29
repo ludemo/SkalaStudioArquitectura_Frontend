@@ -21,7 +21,6 @@ let muestra= getComputedStyle(document.querySelector('.bloque1')).getPropertyVal
 console.log(muestra)
 //------------------
 function subir(){
-    console.log("Entro o no como es");
     console.log(window.scrollY)
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }

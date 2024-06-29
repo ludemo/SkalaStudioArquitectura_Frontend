@@ -40,10 +40,14 @@
     width: 80%;
     height: 30%;
     margin: 30px;
-    top: -400px;
-    transition: all ease-out .6s;
+    /*desavencimiento texto*/
     opacity: 0;
-
+    transform: translateY(-300px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    &.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
     &__subtitulo1,&_subtitulo2{
         text-align: start;
         display: block;

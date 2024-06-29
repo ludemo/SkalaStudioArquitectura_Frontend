@@ -59,6 +59,7 @@ function avanzar(){
     }
     visibilidad();
 }
+
 function siguiente(){
     console.log(section);
     if(section == 0){
