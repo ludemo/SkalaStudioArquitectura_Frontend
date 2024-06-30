@@ -1,7 +1,7 @@
 .bloque4{
     background-image: url("/assets/img/fondo-portada-2.webp");
     background-size: cover;
-    font-family: PoiretOne;
+    font-family: $text-font;
     position: relative;
 	flex-direction: column;
 }
@@ -50,7 +50,7 @@
     }
     &__texto{
         font-size: 4vh;
-        font-family: PoiretOne;
+        font-family: $text-font;
         margin: 0px;
         display: flex;
         justify-content: center;

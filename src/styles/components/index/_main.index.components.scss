@@ -1,6 +1,6 @@
 .container-scroll{
-    scroll-snap-type: y mandatory;
     height: 100vh;
+    scroll-snap-type: y mandatory;
     overflow-y: scroll ;
     overflow-x: hidden;
     scroll-behavior: smooth;
@@ -14,3 +14,11 @@
     scroll-snap-stop: always;
     display: flex;
 }   
+@media screen and (max-width:700px){
+    .section{
+        height: calc(var(--vh, 1vh) * 100);
+
+    }
+    .service{
+    }
+}

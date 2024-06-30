@@ -19,7 +19,7 @@
     position:absolute;
     display:flex;
     justify-content:center;
-    font-family:"PoiretOne";
+    font-family:$text-font;
     height: 100px;
     &:before{
         content:"";
@@ -55,7 +55,9 @@
     }
   }
 /*---------Bloque de bolitas--------------*/
-
+@media screen and (max-width:700px){
+  
+}
 @media screen and (max-width: 440px){
     .bloque1__imagen{
         display: block;

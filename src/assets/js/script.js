@@ -11,16 +11,3 @@ if(media.matches){
         servicio[i].className += " section ";
     }
 }
-new WholePageSlider({
-    containerId:'wholepage',
-    sectionClass: 'section',
-    pageClass: 'page'
-})
-//----------------
-let muestra= getComputedStyle(document.querySelector('.bloque1')).getPropertyValue('transform')
-console.log(muestra)
-//------------------
-function subir(){
-    console.log(window.scrollY)
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-}
