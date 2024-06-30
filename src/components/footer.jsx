@@ -1,7 +1,7 @@
-import skalaLogo from '../assets/img/SkalaLetras.webp';
-import whatsAppLogo from '../assets/img/whatsapp-logo.webp';
-import instagramLogo from '../assets/img/Instagram.webp';
-import facebookLogo from '../assets/img/Facebook.webp'; 
+import skalaLogo from 'assets/img/SkalaLetras.webp';
+import whatsAppLogo from 'assets/img/whatsapp-logo.webp';
+import instagramLogo from 'assets/img/Instagram.webp';
+import facebookLogo from 'assets/img/Facebook.webp';
 export default function Footer(){
     return (
         <div className="footer footer--index">
