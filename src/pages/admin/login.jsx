@@ -8,7 +8,7 @@ export default function Login() {
     const [error, setError] = useState("");
     const { setAuth } = useAuth();
     const navigate = useNavigate();
-    const allowedEmails = ["mrsmeow007@gmail.com","acanazacua@unsa.edu.pe"];  // Lista de correos permitidos
+    const allowedEmails = ["mrsmeow007@gmail.com","acanazacua@unsa.edu.pe","sonque@unsa.edu.pe"];  // Lista de correos permitidos
 
     const onSuccess = (credentialResponse) => {
         const userObject = jwtDecode(credentialResponse.credential);
