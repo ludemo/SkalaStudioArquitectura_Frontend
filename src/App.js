@@ -6,7 +6,7 @@ import Login from './pages/admin/login';
 import Admin from './pages/admin/page';
 import { PrivateRoutes } from './utils/PrivateRoutes';
 import { AuthProvider } from './context/AuthContext';
-
+import Formulario from 'pages/suficiencia-Unsa/formulario';
 function App() {
     return (
         <AuthProvider>
@@ -14,6 +14,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<HomePage />} />
                     <Route path="/suficiencia-Unsa" element={<Suficiencia />} />
+                    <Route path="/suficiencia-Unsa/formulario" element={<Formulario />} />
                     <Route element={<PrivateRoutes />}>
                         <Route path="/Admin" element={<Admin />} />
                     </Route>

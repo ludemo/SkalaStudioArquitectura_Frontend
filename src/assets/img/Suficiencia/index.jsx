@@ -6,6 +6,9 @@ import ingresantes from './ingresantes'
 import flayerActual from './Flyer-12Febrero2.webp'
 import chicaModalidades from './chica-modalidades.webp'
 import chicoMatricula from './chico-matricula.webp'
+import pasosMatriculaDesktop from './matr-pc.webp'
+import pasosMatriculaMobil from './matr-cel.webp'
+import brochure from './brochure/febrero_2024.pdf'
 const suficiencia = {
     portadaDesktop,
     portadaMobil,
@@ -15,6 +18,9 @@ const suficiencia = {
     flayerActual,
     chicaModalidades,
     chicoMatricula,
+    pasosMatriculaDesktop,
+    pasosMatriculaMobil,
+    brochure
 }
 
 export default suficiencia;

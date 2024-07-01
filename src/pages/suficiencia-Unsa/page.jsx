@@ -4,42 +4,70 @@ import suficiencia from 'assets/img/Suficiencia/'
 import common from 'assets/img/common'
 import { useEffect } from 'react';
 import Glide from '@glidejs/glide'
+
 export default function Suficiencia() {
+
     useEffect(() => {
-        const glide = new Glide('.glide', {
-          type: 'carousel',
-          perView: 3.15,
-          gap: 40,
-          autoplay: 2500,
-          focusAt: 'center',
-          breakpoints: {
-            1680: {
-              perView: 2.8,
+ 
+        let glide;
+
+        const initializeGlide = () => {
+          glide = new Glide('.glide', {
+            type: 'carousel',
+            perView: 3.15,
+            gap: 40,
+            autoplay: 2500,
+            focusAt: 'center',
+            breakpoints: {
+              1680: {
+                perView: 2.8,
+              },
+              1450: {
+                perView: 2.4,
+              },
+              1280: {
+                perView: 2.1,
+              },
+              1030: {
+                perView: 2,
+              },
+              560: {
+                focusAt: 0,
+                perView: 1,
+                gap: 10,
+              },
             },
-            1450: {
-              perView: 2.4,
-            },
-            1280: {
-              perView: 2.1,
-            },
-            1030: {
-              perView: 2,
-            },
-            560: {
-              focusAt: 0,
-              perView: 1,
-              gap: 10,
-            },
-          },
+          });
+          glide.mount();
+        };
+    
+        const images = document.querySelectorAll('.glide__slide img');
+        let imagesLoaded = 0;
+    
+        images.forEach((img) => {
+          img.onload = () => {
+            imagesLoaded += 1;
+            if (imagesLoaded === images.length) {
+              initializeGlide();
+            }
+          };
+    
+          // If images are cached, they may already be loaded
+          if (img.complete) {
+            imagesLoaded += 1;
+            if (imagesLoaded === images.length) {
+              initializeGlide();
+            }
+          }
         });
-        glide.mount();
     
         // Cleanup function to destroy the Glide instance on component unmount
         return () => {
-          glide.destroy();
+          if (glide) {
+            glide.destroy();
+          }
         };
       }, []);
-
     return (
      <>
         <Link to="/">
@@ -70,7 +98,7 @@ export default function Suficiencia() {
         </div>
         <div className="video">
             <div className="video__contenedor">
-                <iframe className="video__frame" width="560" height="315" src="https://www.youtube-nocookie.com/embed/gPzuld1g5QQ?controls=0&amp;start=1" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe className="video__frame" width="560" height="315" src="https://www.youtube-nocookie.com/embed/gPzuld1g5QQ?controls=0&amp;start=1" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
             </div>
         </div>
     {/*Logros*/}
@@ -78,7 +106,7 @@ export default function Suficiencia() {
             <div className="logros__titulo ">
                 <h2 className="seccion__titulo">nuestros <span className="subtitulo--grande">logros</span><br/>10 años creciendo contigo</h2>
             </div>
-            <div className="images glide">
+            <div className="glide">
                 <div className="glide__track" data-glide-el="track">                  
                     <ul className="glide__slides">
                         <li className="glide__slide">
@@ -169,7 +197,7 @@ export default function Suficiencia() {
     <div className="brochure">
         <div className="brochure__contenedor">
             <p className="brochure__texto">Descarga nuestro folleto informativo para conocer todos los detalles del curso</p>
-            <a className="boton__enlace" href="../files/BROCHURE FEBRERO 2024.pdf">
+            <a className="boton__enlace" href={suficiencia.brochure}>
                 <div className="boton">
                     Descargar brochure<img loading="lazy" className="boton__icono" src={common.descarga} alt="descarga"/>
                 </div>
@@ -191,25 +219,10 @@ export default function Suficiencia() {
     <div className="matriculas">
         <img loading="lazy" className="matricula__img" src={suficiencia.chicoMatricula} alt="matriculas"/>
         <div className="matricula__barra">
-            <a className="matricula__boton" id="open" href="formulario">Quiero matricularme</a>
+        <Link className = "matricula__boton" id="open" to="/suficiencia-Unsa/formulario">Quiero matricularme</Link>
         </div>
     </div>
-{/*  <div className="matricula__ventana" id="conteiner">
-        <div className="ventana">
-            <div className="ventana__cierre">
-                <img loading="lazy" className="ventana__cierre-icono" id="close" src="img/cierre.webp" alt="cerrar">
-            </div>
-            <img loading="lazy" className="ventana__img--web" src="img/matr-pc.png" alt="pasos">
-            <img loading="lazy" className="ventana__img--movil" src="img/matr-cel.png" alt="pasos">
-            <a className="boton__enlace" href="archivos/formulariofinal.pdf">
-                <div className="boton boton--ventana">
-                    Descargar formulario
-                    <img loading="lazy" className="boton__icono" src="img/descarga.webp" alt="descarga">
-                </div>
-            </a>
-        </div>
-    </div> */}
-    <Footer />
+    <Footer component ="footer--suficiencia" />
      </>
     );
   }   

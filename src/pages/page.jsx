@@ -164,7 +164,7 @@ export default function HomePage() {
             <a className="mapa" target="_blank" rel="noreferrer noopener" href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3827.5484055893735!2d-71.53645078255616!3d-16.396951299999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91424a50e73f2303%3A0x2b8fea53e563e8c6!2sJos%C3%A9%20L.%20Valdivia%20Herrera!5e0!3m2!1ses!2spe!4v1661832904787!5m2!1ses!2spe">
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3827.5484055893735!2d-71.53645078255616!3d-16.396951299999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91424a50e73f2303%3A0x2b8fea53e563e8c6!2sJos%C3%A9%20L.%20Valdivia%20Herrera!5e0!3m2!1ses!2spe!4v1661832904787!5m2!1ses!2spe" width="100%" height="100%" style={{ border: "0" }} loading="lazy" title="video" referrerPolicy="no-referrer-when-downgrade"></iframe>
             </a>
-            <Footer />
+            <Footer component = "footer--index" />
           </section>
         </div>
 );
