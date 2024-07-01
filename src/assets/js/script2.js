@@ -1,4 +1,4 @@
-new Glide(".images",{
+new Glide("'.glide'",{
 	type: 'carousel',
 	perView: 3.15,
 	gap: 40,
