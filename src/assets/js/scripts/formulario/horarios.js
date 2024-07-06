@@ -1,7 +1,7 @@
 
-var nivel = document.getElementsByClassName("nivel");
+const nivel = document.getElementsByClassName("nivel");
 desaparecer();
-var modalidad = document.getElementById("modalidad");
+const modalidad = document.getElementById("modalidad");
 modalidad.addEventListener("change", function(){
     console.log(modalidad.value);
     if(modalidad.value == "Virtual" || modalidad.value == "Virtual plus"){

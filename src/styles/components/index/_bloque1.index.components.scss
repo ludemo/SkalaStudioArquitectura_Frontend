@@ -67,9 +67,8 @@
         top: 25px;
     }
 }
-@media screen and (min-width:1500px){
+@media screen and (min-width:1920px){
     .preloader{
-        font-size: 2rem;
         height: 150px;
         &:before{
             border:1.7px solid #ffff;    

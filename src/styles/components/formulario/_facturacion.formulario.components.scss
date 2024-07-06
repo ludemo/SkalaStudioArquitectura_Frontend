@@ -50,10 +50,11 @@
         font-family: $text-font;
         background: none;
         padding: 8px 0;
+        color: $blanco;
         width: 90px;
         @include justificar(center);
         position: relative;
-        
+        border:none;
         &::before{
             position:absolute;
             width: 2px;
@@ -95,7 +96,8 @@
         display: flex;
         flex-direction: column;
         margin-bottom: 5px;
-        width: 300px;
+        margin-left: 30px;
+        margin-right: 40px;
     }
     &__form{
         @include grillaForm(2);
@@ -107,6 +109,7 @@
 
 //botones
 .boton--form{
+    color: $blanco;
     font-size: 20px;
     padding: 10px 0px;
     @include justificar(center);
@@ -114,28 +117,48 @@
 }
 .boton--enviar{
     width: 180px;
-    visibility: hidden;
     color: #ffffff;
+    margin-left: auto;
+    margin-right: auto;
     font-family: $parrafo;
 }
 .boton--left{
-    right: 7.5%;
+    margin-left: 10%;
+    &.position-absolute {
+        position: absolute;
+        left: 10px; // Ajusta según sea necesario
+      }
     &::before{
         left: 0px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
     }
 }
 .boton--right{
-    left: 7.5%;
-    visibility: hidden;
+    margin-right: 10%;
     &::before{
         right: 0px;
+        color: #FFF;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
     }
 }
 .botones{
     @include justificar(space-between);
     margin-top: 45px;
     margin-bottom: 30px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
     align-items: center;
+
+    &.justify-right {
+        justify-content: right;
+    }
+
+    &.justify-space-between {
+        justify-content: space-between;
+    }
 }
 
 
@@ -200,3 +223,6 @@
         margin: 0;
     }
 }
+//justify content right sección 1
+//section 2 y 3 justify content space-around
+//Sectión 4 

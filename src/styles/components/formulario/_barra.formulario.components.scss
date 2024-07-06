@@ -52,7 +52,6 @@ html{
     margin-left: auto;
     margin-right: auto;
     width: 90vw;
-   /*  left: 15vw; */
     position: relative;
   }
   .barra{ 
@@ -116,11 +115,9 @@ html{
   .proceso{
     object-fit: cover;
     height: 60%;
-    display: none;
   }
   .listo{
     object-fit: cover;
-    display: none;
     height: 50%;
   }
 //580px
