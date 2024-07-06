@@ -9,68 +9,24 @@ export default function Barra( {section} ){
     const [widthBarra, setWidthBarra] = useState(["0%","0%","0%","0%"]);
     const [colorBarra,setColorBarra]= useState(["linear-gradient(90deg, rgba(0,109,119,1) 0%, rgba(10,158,167,1) 79%)","linear-gradient(90deg, rgba(0,109,119,1) 0%, rgba(10,158,167,1) 79%)","linear-gradient(90deg, rgba(0,109,119,1) 0%, rgba(10,158,167,1) 79%)","linear-gradient(90deg, rgba(0,109,119,1) 0%, rgba(10,158,167,1) 79%)"]);
     useEffect(() => {
-        //Cambiar ancho de barra
-        const updateWidthBarra = widthBarra.map((_, index) => {
-            if(index < section){
-                return "100%";  }
-            else{
-                return "0%";
-            }
-        });
-        setWidthBarra(updateWidthBarra);
-        //cambiar background barra
-        const updateColorBarra = colorBarra.map((_, index) => {
-            if(index < section-1){
-                return "#006D77";
-            }else{
-                return "linear-gradient(90deg, rgba(0,109,119,1) 0%, rgba(10,158,167,1) 79%)";
-            }
-        });
-        setColorBarra(updateColorBarra);
-        //Aparecer y desaparecer check
-        const updateDisplayCheck = displayCheck.map((_, index) => {
-            if(index < section){
-                return 'block';
-            }else{
-              return 'none';
-            }
-        });
-        setDisplayCheck(updateDisplayCheck);
-
-        //Aparecer y desaparecer loader
-        const updateDisplayLoader = displayLoader.map((_, index) => {
-            if (index === section) {
-              return 'block';
-            } else {
-              return 'none';
-            }
-        });
-        setDisplayLoader(updateDisplayLoader);
-
-        //Cambiar colores imagenes
-        const updateEstadoImg = estadoImg.map((_, index) => {
-            if (index < section) {
-              return 'paso-img';
-            } else if (index === section) {
-              return 'actual-img';
-            } else {
-              return '';
-            }
-          });
-        setEstadoImg(updateEstadoImg);
-        //Cambiar estado circulos
-        const updatedEstadoForm = estadoForm.map((_, index) => {
-            if (index < section) {
-              return 'paso';
-            } else if (index === section) {
-              return 'actual';
-            } else {
-              return 'noPaso';
-            }
-          });
-          setEstadoForm(updatedEstadoForm);
-
-    }, [section, estadoImg, estadoForm, displayLoader, displayCheck, widthBarra, colorBarra]);
+      //Cambiar ancho de barra
+      setWidthBarra(prevWidthBarra => prevWidthBarra.map((_, index) => index < section ? "100%" : "0%"));
+      
+      //Cambiar background barra
+      setColorBarra(prevColorBarra => prevColorBarra.map((_, index) => index < section - 1 ? "#006D77" : "linear-gradient(90deg, rgba(0,109,119,1) 0%, rgba(10,158,167,1) 79%)"));
+      
+      //Aparecer y desaparecer check
+      setDisplayCheck(prevDisplayCheck => prevDisplayCheck.map((_, index) => index < section ? 'block' : 'none'));
+      
+      //Aparecer y desaparecer loader
+      setDisplayLoader(prevDisplayLoader => prevDisplayLoader.map((_, index) => index === section ? 'block' : 'none'));
+      
+      //Cambiar colores imágenes
+      setEstadoImg(prevEstadoImg => prevEstadoImg.map((_, index) => index < section ? 'paso-img' : index === section ? 'actual-img' : ''));
+      
+      //Cambiar estado círculos
+      setEstadoForm(prevEstadoForm => prevEstadoForm.map((_, index) => index < section ? 'paso' : index === section ? 'actual' : 'noPaso'));
+  }, [section]);
 
     return (
         <div className="barrita" id="barrita">

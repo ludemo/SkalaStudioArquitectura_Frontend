@@ -1,5 +1,6 @@
 import common from 'assets/img/common'
 import { useState} from 'react';
+import { Link } from 'react-router-dom';
 import Barra from './Barra'
 import Section1 from './formulario_section1';
 import Section2 from './formulario_section2';
@@ -25,9 +26,9 @@ export default function Formulario() {
       };
     return (
     <>
-     <a href="suficiencia-Unsa" className="flecha-atras__link">
+        <Link to="/suficiencia-Unsa" className="flecha-atras__link">
             <img className="talleres__flecha-atras" src={common.flecha} alt="atras"/>Suficiencia Unsa
-    </a>
+        </Link>
     <h1 className="seccion__titulo">Formulario de matrícula</h1>
     <Barra section = { currentSection } />
     <form onKeyDown={handleKeyDown} id = "form" action="">

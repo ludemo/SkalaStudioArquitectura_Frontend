@@ -20,3 +20,4 @@ function desaparecer(){
     nivel[0].style.display="none";
     nivel[1].style.display="none";
 }
+//modalidad es virtual o virtual plus -> desaparecer
