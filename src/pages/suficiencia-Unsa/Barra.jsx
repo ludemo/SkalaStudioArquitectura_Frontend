@@ -8,6 +8,8 @@ export default function Barra( {section} ){
     const [displayCheck,setDisplayCheck] = useState(["none","none","none","none"]);
     const [widthBarra, setWidthBarra] = useState(["0%","0%","0%","0%"]);
     const [colorBarra,setColorBarra]= useState(["linear-gradient(90deg, rgba(0,109,119,1) 0%, rgba(10,158,167,1) 79%)","linear-gradient(90deg, rgba(0,109,119,1) 0%, rgba(10,158,167,1) 79%)","linear-gradient(90deg, rgba(0,109,119,1) 0%, rgba(10,158,167,1) 79%)","linear-gradient(90deg, rgba(0,109,119,1) 0%, rgba(10,158,167,1) 79%)"]);
+    const [isMobile, setIsMobile] = useState(false);
+
     useEffect(() => {
       //Cambiar ancho de barra
       setWidthBarra(prevWidthBarra => prevWidthBarra.map((_, index) => index < section ? "100%" : "0%"));
@@ -26,7 +28,19 @@ export default function Barra( {section} ){
       
       //Cambiar estado círculos
       setEstadoForm(prevEstadoForm => prevEstadoForm.map((_, index) => index < section ? 'paso' : index === section ? 'actual' : 'noPaso'));
-  }, [section]);
+        
+        //Revisión del viewport 
+        const checkViewport = () => {
+            setIsMobile(window.matchMedia('(max-width: 767px)').matches);
+        };
+        // Check initially
+        checkViewport();
+        // Add event listener
+        window.addEventListener('resize', checkViewport);  
+        // Cleanup event listener
+        return () => window.removeEventListener('resize', checkViewport);    
+
+    }, [section]);
 
     return (
         <div className="barrita" id="barrita">
@@ -49,11 +63,13 @@ export default function Barra( {section} ){
                     </div>
                 ))}
             </div>
+            {/* if(sectino 1 == display block*/}
+            {/* if(sectino 1 == display block*/}
             <div className="textos-conteiner">
-                <h4 id = "form__text__facturacion">Datos de <br/>facturación</h4>
-                <h4 id = "form__text__datosPersonales">Datos del <br/>alumno</h4>
-                <h4 id = "form__text__datosUbicacion">Datos de <br/>ubicación</h4>
-                <h4 id = "form__text__ultimo">Último <br/> paso</h4>
+                <h4 id = "form__text__facturacion" style={{ display: (isMobile && section === 0) || (!isMobile) ? 'block' : 'none' }} >Datos de <br/>facturación</h4>
+                <h4 id = "form__text__datosPersonales" style={{ display: (isMobile && section === 1) || (!isMobile) ? 'block' : 'none' }}>Datos del <br/>alumno</h4>
+                <h4 id = "form__text__datosUbicacion" style={{ display: (isMobile && section === 2) || (!isMobile) ? 'block' : 'none' }}>Datos de <br/>ubicación</h4>
+                <h4 id = "form__text__ultimo" style={{ display: (isMobile && section === 3) || (!isMobile) ? 'block' : 'none' }}>Último <br/> paso</h4>
             </div>
         </div>
     )

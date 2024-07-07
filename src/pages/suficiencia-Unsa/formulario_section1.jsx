@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import { useState } from "react";
 import formulario from 'assets/img/formulario'
-
-export default function Section1({section}){
+//Datos de boleta
+export default function Section1({section , setDatosPDF }){
 
      //Variable para el timpo de pago que aparezca y desaparezca
      const [paymentMethod, setPaymentMethod] = useState('deposito');
@@ -19,7 +19,7 @@ export default function Section1({section}){
      };
 
     return(
-        <div className="form__seccion"  style={{ transform: `translateX(-${section * 100}%)`}} >
+        <div className="form__seccion"  style={{ height : section===0 ? '100%' : '0',transform: `translateX(-${section * 100}%)`}} >
                 
         {(['yape', 'deposito'].includes(paymentMethod))  && (
             <div className="facturacion__imagen">
