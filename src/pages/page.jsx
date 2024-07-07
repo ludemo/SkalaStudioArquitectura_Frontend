@@ -102,7 +102,7 @@ export default function HomePage() {
                 <img loading="lazy" className="fondo fondo--movil" src={require('./../assets/img/talleres-cel.webp')} alt="suficiencia" />
               </div>
               <div className="servicio" id="servicio3" >
-                <a className="servicio__enlace" href="arquitectura">
+                <Link className="servicio__enlace" to="/estudio-Arquitectura">
                   <div className="servicio__textos">
                     <div className="caja">
                       <h2 className="caja__subtitulo1">estudio <del></del></h2>
@@ -110,7 +110,7 @@ export default function HomePage() {
                       <h2 className="caja__subtitulo2">arquitectura</h2>
                     </div>
                   </div>
-                </a>
+                </Link>
                 <img className="fondo fondo--web" src={require('./../assets/img/estudio.webp')} alt="estudio" />
                 <img className="fondo fondo--movil" src={require('./../assets/img/estudio-cel.webp')} alt="suficiencia" />
               </div>
