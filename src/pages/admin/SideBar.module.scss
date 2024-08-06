@@ -1,0 +1,10 @@
+@import 'styles/settings/colors.settings.scss';
+.sideBar{
+    position: fixed;
+    background-color:$primary-color-950 ;
+    .active{
+        background-color: hsl(0, 0%, 70%);
+        color:$primary-color-950;
+    }
+}
+

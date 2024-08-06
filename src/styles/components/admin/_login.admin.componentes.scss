@@ -1,0 +1,74 @@
+.login-container {
+    display: flex;
+    justify-content: center; /* Centro horizontalmente */
+    align-items: center;     /* Centro verticalmente */
+    height: 100vh;           /* Ocupa toda la altura de la ventana */
+}
+.login{
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    &__logo-container{
+        height: 450px;
+        width: 50%;
+        display: flex;
+        flex-direction: column;   
+        justify-content: center;
+        align-items: center;
+        background-color: #01252B;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }  
+    &__buton-container{
+        display: flex;
+        justify-content: center;
+    } 
+    &__content{
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        width: 50%;
+        background-image: url("/assets/img/admin/login-fondo.webp");
+        background-size: cover;
+        padding:20px;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &__title{
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    &__logo-image{
+        width: 30%;
+    }
+    &__logo-texto{
+        width: 40%;
+    }
+    &__error{
+        background-color: $secondary-color-200;
+        padding: 10px;
+        margin-top: 30px;
+        width: 70%;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+        border-radius: 10px;
+        color:$secondary-color-800;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .login__logo-container{
+        display: none;
+    }
+    .login__content{
+        height: 400px;
+        width: 100%;
+        border-radius: 10px;
+    }
+}

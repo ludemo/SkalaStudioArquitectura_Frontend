@@ -1,8 +1,5 @@
 import common from 'assets/img/common'
 import { Link } from 'react-router-dom'
-import whatsAppLogo from 'assets/img/whatsapp-logo.webp';
-import instagramLogo from 'assets/img/Instagram.webp';
-import facebookLogo from 'assets/img/Facebook.webp';
 export default function Talleres(){
     return (
         <>
@@ -68,13 +65,13 @@ export default function Talleres(){
                                 </div>
                                 <div className="redes-talleres_logos">
                                     <a href="https://wa.link/f2iyke">
-                                        <img loading="lazy" className="redes-talleres__icono" src = {whatsAppLogo} alt="whatsapp"/>
+                                        <img loading="lazy" className="redes-talleres__icono" src = {common.whatsapp_icon} alt="whatsapp"/>
                                     </a>
                                     <a href="https://www.facebook.com/studioskala">
-                                        <img loading="lazy" className="redes-talleres__icono" src= {facebookLogo} alt="facebook"/>
+                                        <img loading="lazy" className="redes-talleres__icono" src= {common.facebook_icon} alt="facebook"/>
                                     </a>
                                     <a href="https://www.instagram.com/skalastudio_arquitectura/">
-                                        <img loading="lazy" className="redes-talleres__icono" src= {instagramLogo} alt="instagram"/>  
+                                        <img loading="lazy" className="redes-talleres__icono" src= {common.instagran_icon} alt="instagram"/>  
                                     </a>
                                 </div>
                             </div>
