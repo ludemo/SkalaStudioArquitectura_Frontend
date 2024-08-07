@@ -17,7 +17,7 @@ export default function Admin() {
                 <img src={auth.picture} alt="imagen de perfil" referrerPolicy="no-referrer"/>
                 <h1>Nombre : {auth.given_name}</h1>
                 <button onClick={handleLogout}>Cerrar Sesión</button>
-                <Outlet/>
+                    <Outlet/>
             </div>
         </div>
     );

@@ -1,0 +1,126 @@
+[
+    {
+      "id": 1,
+      "perfilEstudiante": {
+        "foto": "url_a_la_foto_del_estudiante_1",
+        "nombres": "Angel Alexis",
+        "apellidos": "Zevallos Apaza",
+        "nacimiento": "20/02/2000",
+        "celular": "924417100",
+        "dni": "73686294",
+        "estado": "Pendiente"
+      },
+      "datosPersonales": {
+        "datosUbicacion": {
+          "lugarNacimiento": "Lima",
+          "direccion": "Av. Siempre Viva 123",
+          "correo": "angel@example.com"
+        },
+        "representante": {
+          "nombre": "Juan",
+          "apellido": "Perez",
+          "telefono": "912345678"
+        },
+        "datosAcademicos": {
+          "institucion": "Universidad Nacional"
+        }
+      },
+      "datosTecnicos": {
+        "plan": {
+          "modalidad": "Virtual",
+          "nivel": "Intermedio",
+          "horario": "Lunes a Viernes 9am - 12pm",
+          "fechaInicio": "01/09/2024"
+        },
+        "datosFacturacion": {
+          "nombreBoleta": "Angel Alexis Zevallos Apaza",
+          "banco": "Banco de la Nación",
+          "numeroOperacion": "1234567890",
+          "dni": "73686294"
+        }
+      }
+    },
+    {
+      "id": 2,
+      "perfilEstudiante": {
+        "foto": "url_a_la_foto_del_estudiante_2",
+        "nombres": "Maria Fernanda",
+        "apellidos": "Gomez Lopez",
+        "nacimiento": "15/05/1998",
+        "celular": "987654321",
+        "dni": "87654321",
+        "estado": "Verificado"
+      },
+      "datosPersonales": {
+        "datosUbicacion": {
+          "lugarNacimiento": "Arequipa",
+          "direccion": "Calle Falsa 456",
+          "correo": "maria@example.com"
+        },
+        "representante": {
+          "nombre": "Laura",
+          "apellido": "Lopez",
+          "telefono": "987654321"
+        },
+        "datosAcademicos": {
+          "institucion": "Instituto Tecnológico"
+        }
+      },
+      "datosTecnicos": {
+        "plan": {
+          "modalidad": "Presencial",
+          "nivel": "Avanzado",
+          "horario": "Martes y Jueves 2pm - 5pm",
+          "fechaInicio": "05/10/2024"
+        },
+        "datosFacturacion": {
+          "nombreBoleta": "Maria Fernanda Gomez Lopez",
+          "banco": "BCP",
+          "numeroOperacion": "9876543210",
+          "dni": "87654321"
+        }
+      }
+    },
+    {
+      "id": 3,
+      "perfilEstudiante": {
+        "foto": "url_a_la_foto_del_estudiante_3",
+        "nombres": "Jorge Luis",
+        "apellidos": "Rodriguez Castillo",
+        "nacimiento": "30/11/1995",
+        "celular": "912345678",
+        "dni": "65432198",
+        "estado": "Pendiente"
+      },
+      "datosPersonales": {
+        "datosUbicacion": {
+          "lugarNacimiento": "Cusco",
+          "direccion": "Jr. Libertad 789",
+          "correo": "jorge@example.com"
+        },
+        "representante": {
+          "nombre": "Carlos",
+          "apellido": "Rodriguez",
+          "telefono": "923456789"
+        },
+        "datosAcademicos": {
+          "institucion": "Universidad Privada"
+        }
+      },
+      "datosTecnicos": {
+        "plan": {
+          "modalidad": "Virtual",
+          "nivel": "Básico",
+          "horario": "Lunes y Miércoles 6pm - 8pm",
+          "fechaInicio": "15/08/2024"
+        },
+        "datosFacturacion": {
+          "nombreBoleta": "Jorge Luis Rodriguez Castillo",
+          "banco": "BBVA",
+          "numeroOperacion": "1231231230",
+          "dni": "65432198"
+        }
+      }
+    }
+  ]
+  
