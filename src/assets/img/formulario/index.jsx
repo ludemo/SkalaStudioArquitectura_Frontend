@@ -7,13 +7,13 @@ import listo from './listo.webp'
 import proceso from './proceso.webp'
 import deposito from './deposito.png'
 const formulario = {
-    datos,
-    final,
-    mapa,
-    pago,
-    yape,
-    listo,
-    proceso,
-    deposito,
+  datos,
+  final,
+  mapa,
+  pago,
+  yape,
+  listo,
+  proceso,
+  deposito
 }
-export default formulario;
+export default formulario

@@ -30,7 +30,8 @@
           "modalidad": "Virtual",
           "nivel": "Intermedio",
           "horario": "Lunes a Viernes 9am - 12pm",
-          "fechaInicio": "01/09/2024"
+          "fechaInicio": "01/09/2024",
+          "fechaCiere" : "01/10/2024"
         },
         "datosFacturacion": {
           "nombreBoleta": "Angel Alexis Zevallos Apaza",
