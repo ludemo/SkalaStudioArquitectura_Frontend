@@ -1,33 +1,29 @@
-import { teacherAdapter } from "../../adapters/teacher-adapter";
-import { useEffect, useState } from "react";
-import { IconPlus, IconSearch } from "@tabler/icons-react";
-import styles from "./Profesores.module.css";
+import { teacherAdapter } from '../../adapters/teacher-adapter'
+import { useEffect, useState } from 'react'
+import styles from './Profesores.module.css'
+import { IconPlus, IconSearch } from '@tabler/icons-react'
 
-export default function Profesores() {
+export default function Profesores () {
   const handleView = (id) => {
-    console.log(`Ver docente ${id}`);
-  };
-  const [loading, setLoading] = useState(true);
-  const [teachers, setTeachers] = useState([]);
+    console.log(`Ver docente ${id}`)
+  }
+  const [loading, setLoading] = useState(true)
+  const [teachers, setTeachers] = useState([])
   useEffect(() => {
     const fetchData = async () => {
-      const { teachers } = await teacherAdapter.getTeachers();
-      setTeachers(teachers);
-      setLoading(false);
-    };
-    fetchData();
-  }, []);
+      const { teachers } = await teacherAdapter.getTeachers()
+      setTeachers(teachers)
+      setLoading(false)
+    }
+    fetchData()
+  }, [])
   return (
     <div>
       <h1>administración de docentes</h1>
       <div className={styles.container}>
         <div className={styles.actions}>
           <div className={styles.search}>
-            <input
-              type="text"
-              placeholder="Buscar docente"
-              className={styles.search__input}
-            />
+            <input type='text' placeholder='Buscar docente' className={styles.search__input} />
             <button className={styles.search__button}>
               <IconSearch stroke={2} size={20} />
             </button>
@@ -49,7 +45,7 @@ export default function Profesores() {
                   <th className={styles.th}>Estado</th>
                   <th className={styles.th}>Curso</th>
                   <th className={styles.th}>Calificación</th>
-                  <th className={styles.th}></th>
+                  <th className={styles.th} />
                 </tr>
               </thead>
               <tbody>
@@ -58,20 +54,10 @@ export default function Profesores() {
                     <td className={styles.td}>{item.id}</td>
                     <td className={styles.td}>{item.name}</td>
                     <td className={styles.td}>
-                      {item.status ? (
-                        <span className={`${styles.status} ${styles.active}`}>
-                          Activo
-                        </span>
-                      ) : (
-                        <span className={`${styles.status} ${styles.inactive}`}>
-                          Inactivo
-                        </span>
-                      )}
+                      {item.status ? (<span className={`${styles.status} ${styles.active}`}>Activo</span>) : (<span className={`${styles.status} ${styles.inactive}`}>Inactivo</span>)}
                     </td>
                     <td className={styles.td}>{item.course}</td>
-                    <td className={`${styles.td} ${styles.qualification}`}>
-                      {item.qualification}
-                    </td>
+                    <td className={`${styles.td} ${styles.qualification}`}>{item.qualification}</td>
                     <td className={styles.td}>
                       <button onClick={() => handleView(item.id)}>Ver</button>
                     </td>
@@ -83,5 +69,5 @@ export default function Profesores() {
         </div>
       </div>
     </div>
-  );
+  )
 }

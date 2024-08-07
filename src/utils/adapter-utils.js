@@ -1,13 +1,13 @@
 export const getEmoticon = (qualification) => {
   if (qualification >= 90) {
-    return "🤩";
+    return '🤩'
   } else if (qualification >= 70) {
-    return "😊";
+    return '😊'
   } else if (qualification >= 50) {
-    return "😐";
+    return '😐'
   } else if (qualification >= 30) {
-    return "😖";
+    return '😖'
   } else {
-    return "😓";
+    return '😓'
   }
-};
+}

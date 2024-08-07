@@ -8,15 +8,15 @@ import instagran_icon from './Instagram.webp'
 import facebook_icon from './Facebook.webp'
 import Skala_texto from './SkalaLetras.webp'
 const common = {
-    casa,
-    descarga,
-    cierre,
-    flecha,
-    lampara_icon,
-    whatsapp_icon,
-    instagran_icon,
-    facebook_icon,
-    Skala_texto,
-}; 
+  casa,
+  descarga,
+  cierre,
+  flecha,
+  lampara_icon,
+  whatsapp_icon,
+  instagran_icon,
+  facebook_icon,
+  Skala_texto
+}
 
-export default common;
+export default common

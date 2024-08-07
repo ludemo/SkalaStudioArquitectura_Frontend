@@ -4,11 +4,11 @@ import user from './user.svg'
 import doc from './doc.svg'
 import arrow from './row-left.svg'
 const sideBar = {
-    teacher,
-    student,
-    user,
-    doc,
-    arrow,
+  teacher,
+  student,
+  user,
+  doc,
+  arrow
 }
 
-export default sideBar;
+export default sideBar

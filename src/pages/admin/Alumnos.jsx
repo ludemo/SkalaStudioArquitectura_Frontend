@@ -1,26 +1,26 @@
-export default function Alumnos() {
+export default function Alumnos () {
   const data = [
     {
-      name: "Juan",
-      lastname: "Pérez",
-      status: "Activo",
-      paymentDate: "2024-08-01",
-      startDate: "2024-01-01",
-      closingDate: "2024-12-31",
+      name: 'Juan',
+      lastname: 'Pérez',
+      status: 'Activo',
+      paymentDate: '2024-08-01',
+      startDate: '2024-01-01',
+      closingDate: '2024-12-31'
     },
     {
-      name: "María",
-      lastname: "Gómez",
-      status: "Inactivo",
-      paymentDate: "2024-07-15",
-      startDate: "2024-02-01",
-      closingDate: "2024-11-30",
-    },
-  ];
+      name: 'María',
+      lastname: 'Gómez',
+      status: 'Inactivo',
+      paymentDate: '2024-07-15',
+      startDate: '2024-02-01',
+      closingDate: '2024-11-30'
+    }
+  ]
   return (
     <div>
       <h1>Alumnos</h1>
-      <div></div>
+      <div />
       <div>
         <table>
           <thead>
@@ -48,5 +48,5 @@ export default function Alumnos() {
         </table>
       </div>
     </div>
-  );
+  )
 }
