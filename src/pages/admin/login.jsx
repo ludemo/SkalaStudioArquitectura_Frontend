@@ -3,7 +3,7 @@ import { jwtDecode } from "jwt-decode";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
-import common from "assets/img/common";
+import common from "../../assets/img/common/index";
 export default function Login() {
   const clientID =
     "72925900356-dlmqrd1dnrfumfo7sijbl5nhbbuga82c.apps.googleusercontent.com";

@@ -1,7 +1,5 @@
-import { getEmoticon } from "utils/adapter-utils";
-
-const { teacherService } = require("services/api/teacher-service");
-
+import { getEmoticon } from "../utils/adapter-utils";
+import { teacherService } from "../services/api/teacher-service";
 class TeacherAdapter {
   async getTeachers() {
     const response = await teacherService.getTeachers();
