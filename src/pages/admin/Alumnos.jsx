@@ -1,3 +1,4 @@
+import { Outlet } from 'react-router-dom'
 export default function Alumnos () {
   const data = [
     {
@@ -47,6 +48,7 @@ export default function Alumnos () {
           </tbody>
         </table>
       </div>
+      <Outlet />
     </div>
   )
 }

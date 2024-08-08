@@ -5,6 +5,7 @@
   &__rotate {
     transform: rotate(180deg);
   }
+  z-index: 100;
 }
 .sidebar {
   background-color: $primary-color-950;

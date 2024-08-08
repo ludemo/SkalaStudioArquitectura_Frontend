@@ -19,7 +19,7 @@ import Alumnos from './pages/admin/Alumnos'
 import Cuentas from './pages/admin/Cuentas'
 import Profesores from './pages/admin/Profesores'
 import Formulario from './pages/suficiencia-Unsa/formulario'
-
+import AlumnoProfile from './pages/admin/AlumnoProfile'
 function App () {
   return (
     <AuthProvider>
@@ -41,17 +41,14 @@ function App () {
           <Route element={<PrivateRoutes />}>
             {/* Administrador  */}
             <Route path='/Admin' element={<Admin />}>
-              <Route
-                path='actualizar/primeros-puestos'
-                element={<Primerospuetos />}
-              />
-              <Route
-                path='actualizar/proximo-inicio'
-                element={<ProximoInicio />}
-              />
+              <Route path='actualizar/primeros-puestos' element={<Primerospuetos />}/>
+              <Route path='actualizar/proximo-inicio' element={<ProximoInicio />}/>
               <Route path='actualizar/brochure' element={<Brochure />} />
               <Route path='actualizar/textos' element={<Textos />} />
-              <Route path='alumnos' element={<Alumnos />} />
+          {/* Alumnos */}
+              <Route path='alumnos' element={<Alumnos />}>
+                <Route path=':id' element={<AlumnoProfile />} />
+              </Route>
               <Route path='profesores' element={<Profesores />} />
               <Route path='cuentas' element={<Cuentas />} />
             </Route>
