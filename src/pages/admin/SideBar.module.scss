@@ -1,11 +1,11 @@
 @import "../../styles/settings/colors.settings.scss";
 .arrow {
+  z-index: 100;
   background: none;
   border: none;
   &__rotate {
     transform: rotate(180deg);
   }
-  z-index: 100;
 }
 .sidebar {
   background-color: $primary-color-950;

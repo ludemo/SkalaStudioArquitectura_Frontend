@@ -1,8 +1,8 @@
 import styles from './SideBar.module.scss'
 import { NavLink } from 'react-router-dom'
 import { useState } from 'react'
-import sideBar from '../../assets/img/admin/sidebarImg'
-import common from '../../assets/img/common/index'
+import sideBar from '@/assets/img/admin/sidebarImg'
+import common from '@/assets/img/common/index'
 
 export default function SideBar () {
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false)
@@ -16,13 +16,13 @@ export default function SideBar () {
       <div className={styles.sidebar__logoContainer}>
         <img
           className={styles.sidebar__logoImg}
-          src={common.lampara_icon}
+          src={common.lamparaIcon}
           alt='logo_Img'
         />
         {open && (
           <img
             className={styles.sidebar__logoText}
-            src={common.Skala_texto}
+            src={common.SkalaTexto}
             alt='logo_Text'
           />
         )}
