@@ -41,11 +41,11 @@ function App () {
           <Route element={<PrivateRoutes />}>
             {/* Administrador  */}
             <Route path='/Admin' element={<Admin />}>
-              <Route path='actualizar/primeros-puestos' element={<Primerospuetos />}/>
-              <Route path='actualizar/proximo-inicio' element={<ProximoInicio />}/>
+              <Route path='actualizar/primeros-puestos' element={<Primerospuetos />} />
+              <Route path='actualizar/proximo-inicio' element={<ProximoInicio />} />
               <Route path='actualizar/brochure' element={<Brochure />} />
               <Route path='actualizar/textos' element={<Textos />} />
-          {/* Alumnos */}
+              {/* Alumnos */}
               <Route path='alumnos' element={<Alumnos />}>
                 <Route path=':id' element={<AlumnoProfile />} />
               </Route>

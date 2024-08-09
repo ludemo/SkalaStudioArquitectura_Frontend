@@ -94,6 +94,14 @@ tr:last-child .td {
   width: 20px;
 }
 
+.search__button:hover {
+  cursor: pointer;
+}
+
+.search__button svg:hover {
+  stroke: #d6d6d6;
+}
+
 .actions {
   display: flex;
   justify-content: space-between;
@@ -121,4 +129,21 @@ tr:last-child .td {
 
 .qualification {
   font-size: 25px;
+}
+
+.buttonDetail {
+  background: transparent;
+  border: none;
+}
+
+.buttonDetail svg:hover {
+  stroke: #fff;
+  cursor: pointer;
+}
+
+.pagination {
+  display: flex;
+  width: 100%;
+  margin-top: 30px;
+  justify-content: center;
 }

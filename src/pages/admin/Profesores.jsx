@@ -1,11 +1,16 @@
 import { teacherAdapter } from '../../adapters/teacher-adapter'
 import { useEffect, useState } from 'react'
 import styles from './Profesores.module.css'
-import { IconPlus, IconSearch } from '@tabler/icons-react'
+import { IconChevronLeft, IconChevronRight, IconEye, IconPlus, IconSearch } from '@tabler/icons-react'
+import ReactPaginate from 'react-paginate'
+import './Pagination.css'
 
 export default function Profesores () {
   const handleView = (id) => {
     console.log(`Ver docente ${id}`)
+  }
+  const handlePage = (page) => {
+    console.log(`Página ${page}`)
   }
   const [loading, setLoading] = useState(true)
   const [teachers, setTeachers] = useState([])
@@ -37,34 +42,50 @@ export default function Profesores () {
           {loading && <p>Cargando...</p>}
           {!loading && teachers.length === 0 && <p>No hay profesores</p>}
           {!loading && teachers.length > 0 && (
-            <table className={styles.table}>
-              <thead>
-                <tr>
-                  <th className={styles.th}>ID</th>
-                  <th className={styles.th}>Nombre</th>
-                  <th className={styles.th}>Estado</th>
-                  <th className={styles.th}>Curso</th>
-                  <th className={styles.th}>Calificación</th>
-                  <th className={styles.th} />
-                </tr>
-              </thead>
-              <tbody>
-                {teachers.map((item, index) => (
-                  <tr key={index}>
-                    <td className={styles.td}>{item.id}</td>
-                    <td className={styles.td}>{item.name}</td>
-                    <td className={styles.td}>
-                      {item.status ? (<span className={`${styles.status} ${styles.active}`}>Activo</span>) : (<span className={`${styles.status} ${styles.inactive}`}>Inactivo</span>)}
-                    </td>
-                    <td className={styles.td}>{item.course}</td>
-                    <td className={`${styles.td} ${styles.qualification}`}>{item.qualification}</td>
-                    <td className={styles.td}>
-                      <button onClick={() => handleView(item.id)}>Ver</button>
-                    </td>
+            <div>
+              <table className={styles.table}>
+                <thead>
+                  <tr>
+                    <th className={styles.th}>ID</th>
+                    <th className={styles.th}>Nombre</th>
+                    <th className={styles.th}>Estado</th>
+                    <th className={styles.th}>Curso</th>
+                    <th className={styles.th}>Calificación</th>
+                    <th className={styles.th} />
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {teachers.map((item, index) => (
+                    <tr key={index}>
+                      <td className={styles.td}>{item.id}</td>
+                      <td className={styles.td}>{item.name}</td>
+                      <td className={styles.td}>
+                        {item.status ? (<span className={`${styles.status} ${styles.active}`}>Activo</span>) : (<span className={`${styles.status} ${styles.inactive}`}>Inactivo</span>)}
+                      </td>
+                      <td className={styles.td}>{item.course}</td>
+                      <td className={`${styles.td} ${styles.qualification}`}>{item.qualification}</td>
+                      <td className={styles.td}>
+                        <button onClick={() => handleView(item.id)} className={styles.buttonDetail}><IconEye stroke={2} color='#0D2610' /></button>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+              <div className={styles.pagination}>
+                <ReactPaginate
+                  previousLabel={<IconChevronLeft stroke={2} />}
+                  nextLabel={<IconChevronRight stroke={2} />}
+                  pageCount={3}
+                  onPageChange={handlePage}
+                  pageClassName='pagination__item'
+                  containerClassName='pagination'
+                  previousLinkClassName='pagination__link'
+                  nextLinkClassName='pagination__link'
+                  disabledClassName='pagination__link--disabled'
+                  activeClassName='pagination__link--active'
+                />
+              </div>
+            </div>
           )}
         </div>
       </div>
