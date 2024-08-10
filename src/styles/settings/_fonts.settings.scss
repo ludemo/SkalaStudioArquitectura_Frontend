@@ -7,6 +7,12 @@
   font-family: "PoiretOne";
   src: url("/src/assets/fonts/PoiretOne.ttf");
 }
+@font-face {
+  font-family: "PlaypenSans";
+  src: url("/src/assets/fonts/Playpen_Sans/PlaypenSans-VariableFont_wght.ttf");
+  font-weight: 100 200 300 400 500 600 700 800 900;
+  font-style: normal;
+}
 //Usamos el 62.5% para hacer que 1rem =10px ya que normalmente 1 rem es =16px
 $normal-font-size: math.div(2rem * 62.5, 100);
 $small-font-size: math.div(1.8rem * 62.5, 100);
@@ -15,7 +21,62 @@ $title-font: "BebasNeue";
 $text-font: "PoiretOne";
 $titulo: "BebasNeue";
 $parrafo: "PoiretOne";
+$admin-font: "PlaypenSans";
+/*weights*/
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-extrabold: 800;
+/*font admin */
+$admin-font-xsmall: (
+  font-size: 11px,
+  font-weight: 400,
+  font-family: "PlaypenSans"
+);
 
+$admin-font-small: (
+  font-size: 13px,
+  font-weight: 400,
+  font-family: "PlaypenSans"
+);
+
+$admin-font-thin-font: (
+  font-size: 16px,
+  font-weight: 100,
+  font-family: "PlaypenSans"
+);
+
+$admin-font-base: (
+  font-size: 16px,
+  font-weight: 400,
+  font-family: "PlaypenSans"
+);
+
+$admin-font-base-semibold: (
+  font-size: 16px,
+  font-weight: 600,
+  font-family: "PlaypenSans"
+);
+
+$admin-font-large-regular: (
+  font-size: 20px,
+  font-weight: 400,
+  font-family: "PlaypenSans"
+);
+
+$admin-font-large: (
+  font-size: 24px,
+  font-weight: 400,
+  font-family: "PlaypenSans"
+);
+
+$admin-font-large-semibold: (
+  font-size: 24px,
+  font-weight: 600,
+  font-family: "PlaypenSans"
+);
 @media screen and (min-width: 1024px) {
   $normal-font-size: math.div(2.3rem * 62.5, 100);
   $small-font-size: math.div(2.1rem * 62.5, 100);

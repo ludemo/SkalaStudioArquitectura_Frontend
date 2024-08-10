@@ -1,11 +1,11 @@
-import common from '../assets/img/common/index'
+import common from '@/assets/img/common/index'
 export default function Footer ({ component }) {
   return (
     <div className={`footer ${component}`}>
       <div className='footer__logo' href='../index.html'>
         <a href='/'>
           <img
-            src={common.Skala_texto}
+            src={common.SkalaTexto}
             className='footer__logo-img'
             alt='skala-logo'
           />
@@ -22,7 +22,7 @@ export default function Footer ({ component }) {
             <img
               loading='lazy'
               className='red__icono'
-              src={common.facebook_icon}
+              src={common.facebookIcon}
               alt='facebook'
             />
             <p className='red__texto'>/StudioSkala</p>
@@ -37,7 +37,7 @@ export default function Footer ({ component }) {
             <img
               loading='lazy'
               className='red__icono'
-              src={common.instagran_icon}
+              src={common.instagranIcon}
               alt='instagram'
             />
             <p className='red__texto'>/SkalaStudio</p>
@@ -49,7 +49,7 @@ export default function Footer ({ component }) {
             <img
               loading='lazy'
               className='red__icono'
-              src={common.whatsapp_icon}
+              src={common.whatsappIcon}
               alt='whatsapp'
             />
             <p className='red__texto'>942 732 102</p>

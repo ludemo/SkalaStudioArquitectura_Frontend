@@ -1,0 +1,6 @@
+@import '../../styles/settings/colors.settings';
+@import '../../styles/tools/mixins.tools'; 
+@import '../../styles/settings/fonts.settings';
+.container{
+    @include apply-font($admin-font-base);
+}

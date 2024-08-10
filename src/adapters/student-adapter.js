@@ -4,9 +4,12 @@ class StudentAdapter {
   transformStudentData (student) {
     return {
       id: student.id,
-      fullName: `${student.studentProfile.firstName} ${student.studentProfile.lastName}`,
+      firstName: student.studentProfile.firstName,
+      lastName: student.studentProfile.lastName,
       photo: student.studentProfile.photo,
       status: student.studentProfile.status,
+      birthdate: student.studentProfile.birthdate,
+      dni: student.studentProfile.dni,
       contact: {
         phone: student.studentProfile.phone,
         email: student.personalDetails.locationDetails.email

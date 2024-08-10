@@ -15,3 +15,10 @@
     display: flex;
     justify-content: $jc;
 }
+
+@mixin apply-font($font-map) {
+    font-size: map-get($font-map, font-size);
+    font-weight: map-get($font-map, font-weight);
+    font-family: map-get($font-map, font-family);
+}
+  

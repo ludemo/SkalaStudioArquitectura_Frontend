@@ -1,6 +1,6 @@
-import './styles/styles.scss'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Suficiencia from './pages/suficiencia-Unsa/page'
+import '@/styles/styles.scss'
 import HomePage from './pages/page'
 import Login from './pages/admin/Login'
 import Admin from './pages/admin/Admin'
