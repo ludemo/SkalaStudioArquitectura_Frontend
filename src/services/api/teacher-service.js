@@ -1,5 +1,5 @@
 class TeacherService {
-  async getTeachers () {
+  async getTeachers (page = 1, limit = 10, search = '') {
     // return await axios.get('http://localhost:3000/teachers');
     const data = {
       teachers: [
