@@ -1,38 +1,80 @@
 import { teacherAdapter } from '../../adapters/teacher-adapter'
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import styles from './Profesores.module.css'
 import { IconChevronLeft, IconChevronRight, IconEye, IconPlus, IconSearch } from '@tabler/icons-react'
 import ReactPaginate from 'react-paginate'
 import './Pagination.css'
 
 export default function Profesores () {
+  const [loading, setLoading] = useState(true)
+  const [teachers, setTeachers] = useState([])
+  const [currentPage, setCurrentPage] = useState(1)
+  const [search, setSearch] = useState('')
+
+  const fetchTeachers = useCallback(async (page, limit = 10) => {
+    try {
+      const { teachers } = await teacherAdapter.getTeachers(page, limit, search)
+      setTeachers(teachers)
+    } catch (error) {
+      console.error('Error fetching teachers:', error)
+    } finally {
+      setLoading(false)
+    }
+  }, [])
+
   const handleView = (id) => {
     console.log(`Ver docente ${id}`)
   }
-  const handlePage = (page) => {
-    console.log(`Página ${page}`)
-  }
-  const [loading, setLoading] = useState(true)
-  const [teachers, setTeachers] = useState([])
-  useEffect(() => {
-    const fetchData = async () => {
-      const { teachers } = await teacherAdapter.getTeachers()
-      setTeachers(teachers)
-      setLoading(false)
+
+  const handleSearch = (event) => {
+    event.preventDefault()
+    const searchValue = event.currentTarget.elements.search.value
+    if (!searchValue) {
+      return
+    } if (searchValue === search) {
+      return
+    } if (searchValue === '') {
+      return
     }
-    fetchData()
-  }, [])
+    console.log('Buscar docente:', searchValue)
+    setSearch(searchValue)
+  }
+
+  const handlePage = (page) => {
+    console.log(`Página ${page.selected + 1}`)
+    setCurrentPage(page.selected + 1)
+  }
+
+  useEffect(() => {
+    console.log('Obtener docentes de la página ', currentPage)
+    fetchTeachers(currentPage)
+  }, [currentPage, search, fetchTeachers])
+
   return (
     <div>
-      <h1>administración de docentes</h1>
+      <h2 className={styles.title}>
+        administración de docentes
+      </h2>
       <div className={styles.container}>
         <div className={styles.actions}>
-          <div className={styles.search}>
-            <input type='text' placeholder='Buscar docente' className={styles.search__input} />
-            <button className={styles.search__button}>
+          <form className={styles.search} onClick={handleSearch}>
+            <label htmlFor='search' className={styles.search__label}>
+              Buscar docente
+            </label>
+            <input
+              type='text'
+              name='search'
+              id='search'
+              placeholder='Buscar docente'
+              className={styles.search__input}
+            />
+            <button
+              className={styles.search__button}
+              type='submit'
+            >
               <IconSearch stroke={2} size={20} />
             </button>
-          </div>
+          </form>
           <button className={styles.addTeacher}>
             <IconPlus stroke={2} />
             <p>Agregar docente</p>

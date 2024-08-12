@@ -1,8 +1,8 @@
 import { getEmoticon } from '../utils/adapter-utils'
 import { teacherService } from '../services/api/teacher-service'
 class TeacherAdapter {
-  async getTeachers () {
-    const response = await teacherService.getTeachers()
+  async getTeachers (page = 1, limit = 10, search = '') {
+    const response = await teacherService.getTeachers(page, limit, search)
     const { teachers } = response
     return {
       teachers: teachers.map((teacher) => ({
