@@ -1,6 +1,5 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom'
 import Suficiencia from './pages/suficiencia-Unsa/page'
-import '@/styles/styles.scss'
 import HomePage from './pages/page'
 import Login from './pages/admin/Login'
 import Admin from './pages/admin/Admin'
@@ -20,6 +19,8 @@ import Cuentas from './pages/admin/Cuentas'
 import Profesores from './pages/admin/Profesores'
 import Formulario from './pages/suficiencia-Unsa/formulario'
 import AlumnoProfile from './pages/admin/AlumnoProfile'
+import AlumnoAsistencia from './pages/admin/AlumnoAsistencia'
+import AlumnoDatos from './pages/admin/AlumnoDatos'
 function App () {
   return (
     <AuthProvider>
@@ -47,7 +48,11 @@ function App () {
               <Route path='actualizar/textos' element={<Textos />} />
               {/* Alumnos */}
               <Route path='alumnos' element={<Alumnos />}>
-                <Route path=':id' element={<AlumnoProfile />} />
+                <Route path=':id' element={<AlumnoProfile />}>
+                  <Route index element={<Navigate to="datos" />} />
+                  <Route path='datos' element = {<AlumnoDatos/>}/>
+                  <Route path='asistencia' element = {<AlumnoAsistencia/>}/>
+                </Route>
               </Route>
               <Route path='profesores' element={<Profesores />} />
               <Route path='cuentas' element={<Cuentas />} />

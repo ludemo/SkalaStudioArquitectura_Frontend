@@ -8,6 +8,7 @@ import instagranIcon from './Instagram.webp'
 import facebookIcon from './Facebook.webp'
 import SkalaTexto from './SkalaLetras.webp'
 import closed from './closed.svg'
+import editar from './editar.svg'
 const common = {
   casa,
   descarga,
@@ -18,7 +19,8 @@ const common = {
   instagranIcon,
   facebookIcon,
   SkalaTexto,
-  closed
+  closed,
+  editar
 }
 
 export default common

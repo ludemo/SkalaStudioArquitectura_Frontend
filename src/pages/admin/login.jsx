@@ -3,6 +3,7 @@ import { jwtDecode } from 'jwt-decode'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useAuth } from '../../context/AuthContext'
+import styles from './Login.module.scss'
 import common from '@/assets/img/common/index'
 export default function Login () {
   const clientID =
@@ -40,28 +41,28 @@ export default function Login () {
   }
   return (
     <GoogleOAuthProvider clientId={clientID}>
-      <div className='login-container'>
-        <div className='login'>
-          <div className='login__logo-container'>
+      <div className={styles['login-container']}>
+        <div className={styles.login}>
+          <div className={styles['login__logo-container']}>
             <img
-              className='login__logo-image'
+              className={styles['login__logo-image']}
               src={common.lamparaIcon}
               alt='lampara-logo'
             />
             <img
-              className='login__logo-texto'
+              className={styles['login__logo-texto']}
               src={common.SkalaTexto}
               alt='skala-logo'
             />
           </div>
-          <div className='login__content'>
-            <h1 className='login__title'>
+          <div className={styles.login__content}>
+            <h1 className={styles.login__title}>
               Área de <br /> administración
             </h1>
-            <div className='login__buton-container'>
+            <div className={styles['login__buton-container']}>
               <GoogleLogin onSuccess={onSuccess} onError={onFailure} />
             </div>
-            {error && <p className='login__error'>{error}</p>}
+            {error && <p className={styles.login__error}>{error}</p>}
           </div>
         </div>
       </div>

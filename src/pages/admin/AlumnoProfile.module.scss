@@ -1,6 +1,43 @@
-@import '../../styles/settings/colors.settings';
-@import '../../styles/tools/mixins.tools'; 
-@import '../../styles/settings/fonts.settings';
-.container{
-    @include apply-font($admin-font-base);
+
+.edit{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px 10px 0 0;
+}
+.perfilContainer{
+    position: relative;
+    background-color: $primary-color-950;
+    border-radius: 20px;
+    padding: 30px 20px;
+    margin-left: auto;
+    margin-right: auto;
+    &__datos{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap:20px;
+        margin-top:20px;
+        *{
+            @include apply-font($admin-font-base);
+        }
+    }
+}
+.datos{
+    &__photo{
+        width: 220px;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-right: 30px;
+    }
+    &__texto{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+}
+
+.outlet{
+    margin-top: 30px;
 }
