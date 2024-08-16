@@ -48,6 +48,22 @@ class StudentAdapter {
     const student = await studentService.getStudentById(id)
     return this.transformStudentData(student)
   }
+
+  async getRegisteredStudents (page = 1, limit = 10, search = '') {
+    const response = await studentService.getRegisteredStudents(page, limit, search)
+    const { students } = response
+    return {
+      students: students.map((student) => ({
+        id: student.id,
+        name: student.name,
+        lastName: student.lastName,
+        status: student.status,
+        paymentDate: student.paymentDate.toLocaleDateString(),
+        startDate: student.startDate.toLocaleDateString(),
+        closingDate: student.closingDate.toLocaleDateString()
+      }))
+    }
+  }
 }
 
 export const studentAdapter = new StudentAdapter()
