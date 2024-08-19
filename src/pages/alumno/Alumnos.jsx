@@ -1,9 +1,9 @@
 import { useCallback, useEffect, useState } from 'react'
-import styles from './Profesores.module.scss'
-import { studentAdapter } from '../../adapters/student-adapter'
+import styles from '../profesor/Profesores.module.scss'
+import { studentAdapter } from '@/adapters/student-adapter'
 import { IconChevronLeft, IconChevronRight, IconEye, IconPlus, IconSearch } from '@tabler/icons-react'
 import ReactPaginate from 'react-paginate'
-import './Pagination.css'
+import '../Pagination.css'
 
 export default function Alumnos () {
   const [loading, setLoading] = useState(true)

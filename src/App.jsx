@@ -13,7 +13,7 @@ import AlumnoProfile from './pages/alumno/AlumnoProfile'
 import AlumnoAsistencia from './pages/alumno/AlumnoAsistencia'
 import AlumnoDatos from './pages/alumno/AlumnoDatos'
 import Cuentas from './pages/cuentas'
-import Profesores from './pages/Profesores'
+import Profesores from './pages/profesor/Profesores'
 function App () {
   return (
     <AuthProvider>

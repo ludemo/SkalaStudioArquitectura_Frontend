@@ -3,7 +3,7 @@ import { useCallback, useEffect, useState } from 'react'
 import styles from './Profesores.module.css'
 import { IconChevronLeft, IconChevronRight, IconEye, IconPlus, IconSearch } from '@tabler/icons-react'
 import ReactPaginate from 'react-paginate'
-import './Pagination.css'
+import '../Pagination.css'
 
 export default function Profesores () {
   const [loading, setLoading] = useState(true)
