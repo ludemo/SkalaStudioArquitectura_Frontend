@@ -1,4 +1,4 @@
-import { teacherAdapter } from '../../adapters/teacher-adapter'
+import { teacherAdapter } from '@/adapters/teacher-adapter'
 import { useCallback, useEffect, useState } from 'react'
 import styles from './Profesores.module.css'
 import { IconChevronLeft, IconChevronRight, IconEye, IconPlus, IconSearch } from '@tabler/icons-react'

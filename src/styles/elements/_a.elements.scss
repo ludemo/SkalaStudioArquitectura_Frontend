@@ -17,21 +17,28 @@ body {
 h1,
 h2 {
   font-family: $title-font;
+  text-align: center;
 }
 h4,
 h5 {
   font-size: $h4-font-size;
 }
 p {
-  font-family: $text-font;
-  font-size: $normal-font-size;
+  font-family: $admin-font;
+  font-size: $font-weight-regular;
 }
 img {
   user-select: none;
 }
-input,
-select {
-  color: #ffffff;
+input[type='text'] , input[type='date'] , input[type='password'] {
+  color:#000000;
+  padding: 5px;
+  font-family: $admin-font;
+  border-radius: 10px;
+  border:none;
+  &:focus{
+    outline: 3px solid $primary-color-600;
+  }
 }
 
 @media screen and (max-width: 768px) {

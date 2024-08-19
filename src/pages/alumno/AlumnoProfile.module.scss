@@ -3,10 +3,20 @@
     position: absolute;
     top: 0;
     right: 0;
+    cursor:pointer;
     margin: 10px 10px 0 0;
 }
+
+.inputContent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:20px;
+  }
 .perfilContainer{
     position: relative;
+    max-width:1000px;
     background-color: $primary-color-950;
     border-radius: 20px;
     padding: 30px 20px;

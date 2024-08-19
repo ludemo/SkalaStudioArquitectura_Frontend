@@ -10,11 +10,10 @@ class StudentAdapter {
       status: student.studentProfile.status,
       birthdate: student.studentProfile.birthdate,
       dni: student.studentProfile.dni,
-      contact: {
-        phone: student.studentProfile.phone,
-        email: student.personalDetails.locationDetails.email
-      },
+      phone: student.studentProfile.phone,
+      institution: student.personalDetails.academicDetails.institution,
       location: {
+        email: student.personalDetails.locationDetails.email,
         birthplace: student.personalDetails.locationDetails.birthplace,
         address: student.personalDetails.locationDetails.address
       },

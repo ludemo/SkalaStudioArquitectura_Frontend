@@ -1,47 +1,28 @@
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom'
-import Suficiencia from './pages/suficiencia-Unsa/page'
-import HomePage from './pages/page'
-import Login from './pages/admin/Login'
-import Admin from './pages/admin/Admin'
+import Login from './pages/Login'
+import '@/styles/styles.scss'
+import Admin from './pages/Admin'
 import { PrivateRoutes } from './utils/PrivateRoutes'
 import { AuthProvider } from './context/AuthContext'
-import Talleres from './pages/talleres/page'
-import EstudioArquitectura from './pages/arquitectura/page'
-import Dibujo from './pages/talleres/dibujo'
-import Geometria from './pages/talleres/geometria'
-import Maqueteria from './pages/talleres/maqueteria'
-import Primerospuetos from './pages/admin/actualizar/PrimerosPuestos'
-import Brochure from './pages/admin/actualizar/Brochure'
-import ProximoInicio from './pages/admin/actualizar/ProximoInicio'
-import Textos from './pages/admin/actualizar/Textos'
-import Alumnos from './pages/admin/Alumnos'
-import Cuentas from './pages/admin/Cuentas'
-import Profesores from './pages/admin/Profesores'
-import Formulario from './pages/suficiencia-Unsa/formulario'
-import AlumnoProfile from './pages/admin/AlumnoProfile'
-import AlumnoAsistencia from './pages/admin/AlumnoAsistencia'
-import AlumnoDatos from './pages/admin/AlumnoDatos'
+import Primerospuetos from './pages/actualizar/PrimerosPuestos'
+import Brochure from './pages/actualizar/Brochure'
+import ProximoInicio from './pages/actualizar/ProximoInicio'
+import Textos from './pages/actualizar/Textos'
+import Alumnos from './pages/alumno/Alumnos'
+import AlumnoProfile from './pages/alumno/AlumnoProfile'
+import AlumnoAsistencia from './pages/alumno/AlumnoAsistencia'
+import AlumnoDatos from './pages/alumno/AlumnoDatos'
+import Cuentas from './pages/cuentas'
+import Profesores from './pages/Profesores'
 function App () {
   return (
     <AuthProvider>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<HomePage />} />
-          <Route path='/suficiencia-Unsa' element={<Suficiencia />} />
-          {/* Talleres */}
-          <Route path='/talleres' element={<Talleres />} />
-          <Route path='/talleres/dibujo' element={<Dibujo />} />
-          <Route path='/talleres/geometria' element={<Geometria />} />
-          <Route path='/talleres/maqueteria' element={<Maqueteria />} />
-          {/* Suficiencia */}
-          <Route path='/suficiencia-Unsa/formulario' element={<Formulario />} />
-          <Route
-            path='/estudio-Arquitectura'
-            element={<EstudioArquitectura />}
-          />
           <Route element={<PrivateRoutes />}>
             {/* Administrador  */}
-            <Route path='/Admin' element={<Admin />}>
+            <Route path='/' element={<Admin />}>
+              {/* Actualizar archivos */}
               <Route path='actualizar/primeros-puestos' element={<Primerospuetos />} />
               <Route path='actualizar/proximo-inicio' element={<ProximoInicio />} />
               <Route path='actualizar/brochure' element={<Brochure />} />
@@ -54,7 +35,9 @@ function App () {
                   <Route path='asistencia' element = {<AlumnoAsistencia/>}/>
                 </Route>
               </Route>
+               {/* Profesores */}
               <Route path='profesores' element={<Profesores />} />
+               {/* Cuentas */}
               <Route path='cuentas' element={<Cuentas />} />
             </Route>
           </Route>

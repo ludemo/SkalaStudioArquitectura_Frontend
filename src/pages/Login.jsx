@@ -2,7 +2,7 @@ import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google'
 import { jwtDecode } from 'jwt-decode'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { useAuth } from '../../context/AuthContext'
+import { useAuth } from '@/context/AuthContext'
 import styles from './Login.module.scss'
 import common from '@/assets/img/common/index'
 export default function Login () {
@@ -28,7 +28,7 @@ export default function Login () {
         picture: userObject.picture,
         given_name: userObject.given_name
       })
-      navigate('/Admin')
+      navigate('/')
     } else {
       console.log('Usuario no permitido')
       setError('Usuario no permitido')
