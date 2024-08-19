@@ -1,0 +1,160 @@
+.container {
+  width: 100%;
+  padding: 20px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.th,
+.td {
+  padding: 8px;
+  text-align: center;
+  background-color: #356d6e;
+}
+
+.td {
+  border-bottom: 1px solid #fff;
+  padding: 20px 0px;
+}
+
+tr:last-child .td {
+  border-bottom: none;
+}
+
+.th {
+  background-color: #02484a;
+}
+
+.button {
+  margin-right: 5px;
+}
+
+.status {
+  padding: 5px 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  width: 90px;
+}
+
+.active {
+  color: #214e4e;
+}
+
+.active::before {
+  content: "";
+  background-color: #68c070;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+  color: #214e4e;
+}
+
+.inactive {
+  color: #90443e;
+}
+
+.inactive::before {
+  content: "";
+  background-color: #90443e;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.search {
+  border-radius: 5px;
+  border: 1px solid #fff;
+  padding: 5px 20px;
+  margin: 5px 0;
+  display: flex;
+  justify-items: center;
+  gap: 10px;
+}
+
+.search__input {
+  background: transparent;
+  outline: none;
+  border: none;
+}
+
+.search__button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  height: 20px;
+  width: 20px;
+}
+
+.search__button:hover {
+  cursor: pointer;
+}
+
+.search__button svg:hover {
+  stroke: #d6d6d6;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.addTeacher {
+  background-color: #1d3e3e;
+  color: #fff;
+  font-weight: 600;
+  padding: 0px 20px;
+  height: 35px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.addTeacher p {
+  font-size: 16px;
+}
+
+.qualification {
+  font-size: 25px;
+}
+
+.buttonDetail {
+  background: transparent;
+  border: none;
+}
+
+.buttonDetail svg:hover {
+  stroke: #fff;
+  cursor: pointer;
+}
+
+.pagination {
+  display: flex;
+  width: 100%;
+  margin-top: 30px;
+  justify-content: center;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.search__label {
+  display: none;
+}
