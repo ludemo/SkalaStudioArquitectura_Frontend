@@ -4,6 +4,7 @@ import styles from './Profesores.module.css'
 import { IconChevronLeft, IconChevronRight, IconEye, IconPlus, IconSearch } from '@tabler/icons-react'
 import ReactPaginate from 'react-paginate'
 import '../Pagination.css'
+import { NavLink } from 'react-router-dom'
 
 export default function Profesores () {
   const [loading, setLoading] = useState(true)
@@ -75,10 +76,12 @@ export default function Profesores () {
               <IconSearch stroke={2} size={20} />
             </button>
           </form>
-          <button className={styles.addTeacher}>
-            <IconPlus stroke={2} />
-            <p>Agregar docente</p>
-          </button>
+          <NavLink to='/profesores/agregar'>
+            <button className={styles.addTeacher}>
+              <IconPlus stroke={2} />
+              <p>Agregar docente</p>
+            </button>
+          </NavLink>
         </div>
         <div>
           {loading && <p>Cargando...</p>}

@@ -1,6 +1,5 @@
 import estudiantesData from '@/data/Estudiantes.json'
 
-// En el StudentService
 class StudentsService {
   getStudents () {
     return new Promise((resolve) => {
