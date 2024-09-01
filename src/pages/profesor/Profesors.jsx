@@ -31,9 +31,11 @@ export default function Profesores () {
     const searchValue = event.currentTarget.elements.search.value
     if (!searchValue) {
       return
-    } if (searchValue === search) {
+    }
+    if (searchValue === search) {
       return
-    } if (searchValue === '') {
+    }
+    if (searchValue === '') {
       return
     }
     console.log('Buscar docente:', searchValue)

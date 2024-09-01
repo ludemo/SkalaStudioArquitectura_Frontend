@@ -1,11 +1,10 @@
 import { useAuth } from '@/context/AuthContext'
-import SideBar from './SideBar'
+import SideBar from '@/components/SideBar'
 import styles from './Admin.module.scss'
 import { Outlet } from 'react-router-dom'
-import UserDropdown from './UserDropdown'
+import UserDropdown from '@/components/UserDropdown'
 export default function Admin () {
   const { auth, setAuth } = useAuth()
-
   const handleLogout = () => {
     setAuth({ token: false, email: '', picture: '', given_name: '' })
     localStorage.removeItem('auth')

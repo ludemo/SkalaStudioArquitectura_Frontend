@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from 'react'
+import { Outlet } from 'react-router-dom'
 import styles from '../profesor/Profesores.module.scss'
 import { studentAdapter } from '@/adapters/student-adapter'
 import { IconChevronLeft, IconChevronRight, IconEye, IconPlus, IconSearch } from '@tabler/icons-react'
@@ -27,9 +28,11 @@ export default function Alumnos () {
     const searchValue = event.currentTarget.elements.search.value
     if (!searchValue) {
       return
-    } if (searchValue === search) {
+    }
+    if (searchValue === search) {
       return
-    } if (searchValue === '') {
+    }
+    if (searchValue === '') {
       return
     }
     console.log('Buscar estudiante:', searchValue)
@@ -126,6 +129,7 @@ export default function Alumnos () {
           )}
         </div>
       </div>
+      <Outlet />
     </div>
   )
 }
