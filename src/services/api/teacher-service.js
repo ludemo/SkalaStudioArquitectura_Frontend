@@ -1,6 +1,5 @@
 class TeacherService {
   async getTeachers (page = 1, limit = 10, search = '') {
-    // return await axios.get('http://localhost:3000/teachers');
     const data = {
       teachers: [
         {
@@ -40,7 +39,19 @@ class TeacherService {
         }
       ]
     }
-    return data
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(data)
+      }, 500)
+    })
+  }
+
+  async addTeacher (teacher) {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve({ message: 'Teacher added successfully' })
+      }, 500)
+    })
   }
 }
 

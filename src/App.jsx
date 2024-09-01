@@ -37,6 +37,7 @@ function App () {
               </Route>
                {/* Profesores */}
               <Route path='profesores' element={<Profesores />} />
+              <Route path='profesores/agregar' element={<AgregarProfesor />} />
                {/* Cuentas */}
               <Route path='cuentas' element={<Cuentas />} />
             </Route>
