@@ -16,7 +16,7 @@ export default function Admin () {
         <UserDropdown
           userName={auth.given_name}
           userImage={auth.picture}
-        onLogout={handleLogout}
+          onLogout={handleLogout}
         />
         <Outlet />
       </div>
