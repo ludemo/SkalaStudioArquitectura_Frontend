@@ -14,8 +14,8 @@ export default function Admin () {
       <SideBar />
       <div className={styles.outlet}>
         <UserDropdown
-        userName={auth.given_name}
-        userImage={auth.picture}
+          userName={auth.given_name}
+          userImage={auth.picture}
         onLogout={handleLogout}
         />
         <Outlet />
