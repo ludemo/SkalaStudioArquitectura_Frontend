@@ -17,7 +17,7 @@ export default function Profesores () {
       const { teachers } = await teacherAdapter.getTeachers(page, limit, search)
       setTeachers(teachers)
     } catch (error) {
-      console.error('Error fetching teachers:', error)
+      console.error('Error al obtener docentes:', error)
     } finally {
       setLoading(false)
     }
