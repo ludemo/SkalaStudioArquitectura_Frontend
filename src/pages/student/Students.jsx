@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react'
 import { Outlet } from 'react-router-dom'
-import styles from '../profesor/Profesores.module.scss'
+import styles from '../teacher/teachers.module.css'
 import { studentAdapter } from '@/adapters/student-adapter'
 import { IconChevronLeft, IconChevronRight, IconEye, IconPlus, IconSearch } from '@tabler/icons-react'
 import ReactPaginate from 'react-paginate'

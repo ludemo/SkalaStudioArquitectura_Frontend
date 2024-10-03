@@ -1,7 +1,7 @@
 import { useParams, Outlet } from 'react-router-dom'
 import { studentAdapter } from '@/adapters/student-adapter'
 import { useEffect, useState } from 'react'
-import styles from './AlumnoProfile.module.scss'
+import styles from './student-profile.module.scss'
 import common from '@/assets/img/common/index'
 import foto from '@/assets/img/suficiencia.webp'
 export default function AlumnoProfile () {

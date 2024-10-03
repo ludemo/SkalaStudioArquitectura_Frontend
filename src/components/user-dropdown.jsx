@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import styles from './UserDropdown.module.scss'
+import styles from './user-dropdown.module.scss'
 import { useState } from 'react'
 import common from '@/assets/img/common/index'
 function UserDropdown ({ userName, userImage, onLogout }) {

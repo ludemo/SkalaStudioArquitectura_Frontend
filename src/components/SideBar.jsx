@@ -1,4 +1,4 @@
-import styles from './SideBar.module.scss'
+import styles from './sidebar.module.scss'
 import { NavLink } from 'react-router-dom'
 import { useState } from 'react'
 import sideBar from '@/assets/img/admin/sidebarImg'

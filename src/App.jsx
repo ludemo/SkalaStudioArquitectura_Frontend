@@ -4,17 +4,17 @@ import '@/styles/styles.scss'
 import Admin from './pages/Admin'
 import { PrivateRoutes } from './utils/PrivateRoutes'
 import { AuthProvider } from './context/AuthContext'
-import Primerospuetos from '@/pages/landingUpdate/PrimerosPuestos'
-import Brochure from '@/pages/landingUpdate/Brochure'
-import ProximoInicio from '@/pages/landingUpdate/ProximoInicio'
-import Textos from '@/pages/landingUpdate/Textos'
-import AlumnoDatos from '@/pages/student/AlumnoDatos'
-import Alumnos from '@/pages/student/Alumnos'
-import AlumnoProfile from '@/pages/student/AlumnoProfile'
-import AlumnoAsistencia from '@/pages/student/AlumnoAsistencia'
-import Cuentas from '@/pages/Cuentas'
-import Profesores from '@/pages/profesor/Profesors'
-import AgregarProfesor from '@/pages/profesor/agregar/AgregarProfesor'
+import Primerospuetos from '@/pages/landing-update/First-places'
+import Brochure from '@/pages/landing-update/Brochure'
+import ProximoInicio from '@/pages/landing-update/Next-start'
+import Textos from '@/pages/landing-update/Texts'
+import AlumnoDatos from '@/pages/student/Student-data'
+import Alumnos from '@/pages/student/Students'
+import AlumnoProfile from '@/pages/student/Student-profile'
+import AlumnoAsistencia from '@/pages/student/Student-assistance'
+import Cuentas from '@/pages/Accounts'
+import Profesores from '@/pages/teacher/Teachers'
+import AgregarProfesor from '@/pages/teacher/add/add-teacher'
 function App () {
   return (
     <AuthProvider>
@@ -23,7 +23,7 @@ function App () {
           <Route element={<PrivateRoutes />}>
             {/* Administrador  */}
             <Route path='/' element={<Admin />}>
-              {/* landingUpdate archivos */}
+              {/* landing-update archivos */}
               <Route path='actualizar/primeros-puestos' element={<Primerospuetos />} />
               <Route path='actualizar/proximo-inicio' element={<ProximoInicio />} />
               <Route path='actualizar/brochure' element={<Brochure />} />

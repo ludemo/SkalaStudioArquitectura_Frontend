@@ -1,6 +1,6 @@
 import { teacherAdapter } from '@/adapters/teacher-adapter'
 import { useCallback, useEffect, useState } from 'react'
-import styles from './Profesores.module.css'
+import styles from './teachers.module.css'
 import { IconChevronLeft, IconChevronRight, IconEye, IconPlus, IconSearch } from '@tabler/icons-react'
 import ReactPaginate from 'react-paginate'
 import '../Pagination.css'

@@ -1,6 +1,6 @@
 import { useParams, useOutletContext, NavLink } from 'react-router-dom'
 import { useState } from 'react'
-import styles from './AlumnoDatos.module.scss'
+import styles from './student-data.module.scss'
 import common from '@/assets/img/common/index'
 export default function AlumnoDatos () {
   const student = useOutletContext()

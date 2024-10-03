@@ -1,0 +1,87 @@
+.container {
+  width: 100%;
+  padding: 20px;
+}
+
+.button {
+  margin-right: 5px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.search__label {
+  display: none;
+}
+
+.form__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form__item {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  height: 50px;
+}
+
+.form__item label {
+  width: 150px;
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+.form__item input {
+  flex: 1;
+  border-radius: 5px;
+  padding: 0px 20px;
+  border: 1px solid #ccc;
+  background-color: rgba($color: #000000, $alpha: 0.3);
+  color: #fff;
+}
+
+.form__actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.form__submit {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  padding: 15px;
+  font-size: 18px;
+  background-color: #359793;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+}
+
+.form__submit:hover {
+  background-color: #2c7a6b;
+}
+
+.form__item input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(100%);
+}
+
+@media screen and (max-width: 1200px) {
+  .form__container {
+    grid-template-columns: 1fr;
+  }
+}

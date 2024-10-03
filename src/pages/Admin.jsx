@@ -1,8 +1,8 @@
 import { useAuth } from '@/context/AuthContext'
-import SideBar from '@/components/SideBar'
+import SideBar from '@/components/sidebar'
 import styles from './Admin.module.scss'
 import { Outlet } from 'react-router-dom'
-import UserDropdown from '@/components/UserDropdown'
+import UserDropdown from '@/components/user-dropdown'
 export default function Admin () {
   const { auth, setAuth } = useAuth()
   const handleLogout = () => {
