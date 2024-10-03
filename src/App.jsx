@@ -14,7 +14,7 @@ import AlumnoProfile from '@/pages/student/Student-profile'
 import AlumnoAsistencia from '@/pages/student/Student-assistance'
 import Cuentas from '@/pages/Accounts'
 import Profesores from '@/pages/teacher/Teachers'
-import AgregarProfesor from '@/pages/teacher/add/add-teacher'
+import AgregarProfesor from '@/pages/teacher/add/Add-teacher'
 function App () {
   return (
     <AuthProvider>
