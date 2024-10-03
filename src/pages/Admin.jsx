@@ -1,5 +1,5 @@
 import { useAuth } from '@/context/AuthContext'
-import SideBar from '@/components/sidebar'
+import SideBar from '../components/sidebar'
 import styles from './Admin.module.scss'
 import { Outlet } from 'react-router-dom'
 import UserDropdown from '@/components/user-dropdown'
